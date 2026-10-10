@@ -309,7 +309,43 @@
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 
-  </style>
+  
+/* --- Universal Scam Help Center --- */
+.scam-help {background:var(--bg);}
+.scam-help .section-head {margin-bottom:28px}
+.scam-help .section-head p {max-width:510px}
+.help-note {background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:17px 19px;color:var(--text-soft);margin:0 0 24px;font-size:15px}
+.help-note strong {color:var(--text)}
+.scam-type-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.scam-type {width:100%;text-align:left;display:flex;align-items:flex-start;gap:11px;min-height:118px;padding:17px 14px;border-radius:16px;background:var(--surface);border:2px solid var(--line);color:var(--text);box-shadow:var(--shadow-soft);transition:transform .16s,border-color .16s,background .16s}
+.scam-type:hover {border-color:var(--brand-strong);transform:translateY(-2px)}
+.scam-type[aria-pressed="true"] {border-color:var(--brand-strong);background:var(--surface-2);box-shadow:0 0 0 1px var(--brand-strong)}
+.scam-symbol {flex:0 0 39px;width:39px;height:39px;border-radius:11px;background:var(--surface-2);display:grid;place-items:center;font-size:23px;line-height:1}
+.scam-type .scam-copy strong {display:block;font:800 15px/1.3 'Manrope',sans-serif;color:var(--text)}
+.scam-type .scam-copy small {display:block;margin-top:6px;font-size:13px;line-height:1.42;color:var(--text-soft)}
+.scam-intake {margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--surface);box-shadow:var(--shadow)}
+.scam-intake h3 {font-size:24px;color:var(--text);margin:8px 0 8px}
+.scam-intake .field {margin-bottom:18px}
+.scam-intake .field label {color:var(--text)}
+.scam-intake input,.scam-intake select,.scam-intake textarea {font-size:16px}
+.scam-intake textarea {min-height:95px}
+.scam-preview {padding:23px;border:1px solid var(--line);background:var(--surface-2);border-radius:17px}
+.scam-preview .small-label {margin-bottom:14px}
+.scam-preview .message {white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text);font-size:15px;line-height:1.65}
+.scam-next {padding:18px;border-radius:16px;border:1px solid var(--line);background:var(--surface);margin-bottom:16px}
+.scam-next strong {display:block;color:var(--text);margin-bottom:6px}
+.scam-next p {font-size:14px}
+.scam-help .muted-note {line-height:1.5}
+.scam-submit {width:100%;white-space:normal;text-align:center}
+.scam-danger {margin-top:15px;padding:14px;background:#fbf3e2;border:1px solid #eed8a6;color:#5d4819;border-radius:12px;font-size:14px;line-height:1.55}
+body[data-theme="dark"] .scam-danger {background:#342b17;border-color:#705a2a;color:#fae9be}
+.scam-footlinks {display:flex;flex-wrap:wrap;gap:16px;margin-top:16px}
+.scam-footlinks a {color:var(--text);font-size:14px;font-weight:700;text-underline-offset:3px}
+.scam-footlinks a:hover {color:var(--brand-strong)}
+@media(max-width:1060px) {.scam-type-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px) {.scam-intake {grid-template-columns:1fr;padding:18px;gap:12px}.scam-type-grid {grid-template-columns:repeat(2,minmax(0,1fr))}.scam-type {min-height:114px;flex-direction:column;padding:12px}.scam-symbol {width:34px;height:34px;flex-basis:34px}.scam-type .scam-copy strong {font-size:14px}.scam-type .scam-copy small {font-size:12px}.scam-help .section-head {margin-bottom:22px}}
+@media(max-width:350px) {.scam-type-grid {grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -328,7 +364,8 @@
         </a>
         <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
           <a href="#threats">Scam types</a>
-          <a href="#recovery">Recovery support</a>
+          <a href="#scam-help">Scam help</a>
+          <a href="#recovery">Social media recovery</a>
           <a href="#stories">Reviews</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -352,7 +389,7 @@
         <h1>Recognize the signs.<br>Protect what matters.</h1>
         <p class="hero-copy">Digital Watchdogs helps everyday people understand online scams, spot red flags faster, and take safer next steps when a social media account, bank profile, email address, or online identity may be at risk.</p>
         <div class="cta-row">
-          <a id="heroWhatsApp" class="btn btn-primary" href="#recovery">Start recovery support <span>↗</span></a>
+          <a id="heroWhatsApp" class="btn btn-primary" href="#scam-help">Get scam guidance <span>↗</span></a>
           <a class="btn btn-secondary" href="#threats">Explore scam types <span>→</span></a>
         </div>
         <div class="micro-trust">
@@ -463,6 +500,136 @@
       </div>
     </div>
 
+    
+    <!-- Universal Scam Help Center: no sensitive data is stored or transmitted by this static page. -->
+    <section class="section scam-help" id="scam-help" aria-labelledby="scamHelpHeading">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="small-label"><span class="tick"></span> DIGITAL WATCHDOGS / SCAM GUIDANCE</div>
+            <h2 id="scamHelpHeading">Facing an online scam?<br>Start here.</h2>
+          </div>
+          <p>Whether it's romance fraud, an investment scheme, a suspicious housing deposit, stolen card details, or something else, choose what happened and reach our team for independent safety guidance.</p>
+        </div>
+        <p class="help-note"><strong>Not sure what to choose?</strong> Select <b>Other or not sure</b>. No sign-up is needed. Do not include passwords, one-time codes, full card numbers, Social Security numbers, or crypto recovery phrases in your message.</p>
+        <div class="scam-type-grid" id="scamTypeGrid" role="group" aria-label="Choose the type of suspected scam">
+          <button type="button" class="scam-type" data-scam="investment" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">📈</span>
+   <span class="scam-copy"><strong>Investment &amp; trading fraud</strong><small>Fake brokers, trading apps, promised returns</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="crypto" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">₿</span>
+   <span class="scam-copy"><strong>Bitcoin &amp; crypto fraud</strong><small>Fake wallets, exchanges, transfers, recovery traps</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="romance" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">♥</span>
+   <span class="scam-copy"><strong>Romance &amp; relationship scams</strong><small>Fake relationships, affection used to request money</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="bank" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">💳</span>
+   <span class="scam-copy"><strong>Banking &amp; credit-card fraud</strong><small>Unauthorized charges, debit cards, fake bank calls</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="identity" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🪪</span>
+   <span class="scam-copy"><strong>Identity theft &amp; impersonation</strong><small>Stolen identity, new accounts opened in your name</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="realestate" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🏠</span>
+   <span class="scam-copy"><strong>Real estate &amp; rental scams</strong><small>Fake property listings, leases, deposits, wire fraud</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="shopping" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🛒</span>
+   <span class="scam-copy"><strong>Online shopping &amp; marketplace</strong><small>Fake stores, sellers, shipping and refunds</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="jobs" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">💼</span>
+   <span class="scam-copy"><strong>Jobs &amp; employment scams</strong><small>Fake recruiters, tasks, equipment and payroll scams</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="social" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">📱</span>
+   <span class="scam-copy"><strong>Social media &amp; account scams</strong><small>Hacked accounts, fake profiles, suspicious messages</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="tech" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🖥️</span>
+   <span class="scam-copy"><strong>Tech support &amp; device scams</strong><small>Fake security alerts, remote access, malware</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="business" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🧾</span>
+   <span class="scam-copy"><strong>Business &amp; invoice fraud</strong><small>Fake invoices, altered payments, supplier emails</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="loans" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🏦</span>
+   <span class="scam-copy"><strong>Loans, debt &amp; credit scams</strong><small>Advance fees, fake lenders, debt-relief promises</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="government" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🏛️</span>
+   <span class="scam-copy"><strong>Government impersonation</strong><small>Fake IRS, Social Security and public-agency calls</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="charity" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🤝</span>
+   <span class="scam-copy"><strong>Charity &amp; emergency fraud</strong><small>Fake fundraisers, disaster and urgent-help requests</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="prize" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🎁</span>
+   <span class="scam-copy"><strong>Prizes, lottery &amp; inheritance</strong><small>Fake winnings, inheritance, sweepstakes fees</small></span>
+ </button>
+<button type="button" class="scam-type" data-scam="other" aria-pressed="false">
+   <span class="scam-symbol" aria-hidden="true">🔎</span>
+   <span class="scam-copy"><strong>Other or not sure</strong><small>Describe any suspicious online activity</small></span>
+ </button>
+        </div>
+        <div class="scam-intake" id="scamIntake">
+          <div>
+            <div class="small-label"><span class="tick"></span> TELL US WHAT HAPPENED</div>
+            <h3 id="scamFormHeading">Prepare your message</h3>
+            <p id="selectedScamText" style="margin-bottom:19px">Select one of the scam categories above to begin.</p>
+            <div class="field">
+              <label for="scamVisitorName">Your first name (optional)</label>
+              <input type="text" id="scamVisitorName" autocomplete="given-name" maxlength="60" placeholder="For example: Mary">
+            </div>
+            <div class="field">
+              <label for="scamConcern">What best describes the issue?</label>
+              <select id="scamConcern" disabled>
+                <option value="">Choose a scam category first</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="scamMoney">Did you send money or share account details? (optional)</label>
+              <select id="scamMoney">
+                <option value="">Prefer not to say / not sure</option>
+                <option value="Money was sent">Money was sent</option>
+                <option value="Account or personal details may have been shared">Account or personal details may have been shared</option>
+                <option value="Both money and details were shared">Both money and details were shared</option>
+                <option value="No money or sensitive details shared">No money or sensitive details shared</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="scamDescription">Briefly describe what happened (optional)</label>
+              <textarea id="scamDescription" maxlength="280" placeholder="Example: I received a fake rental listing asking for a deposit before viewing the property."></textarea>
+            </div>
+          </div>
+          <div>
+            <div class="scam-next">
+              <strong>Important first step</strong>
+              <p id="scamSafetyTip">Stop further payments or sharing personal details until you can verify the situation through a trusted source.</p>
+            </div>
+            <div class="scam-preview">
+              <div class="small-label"><span class="tick"></span> MESSAGE PREVIEW</div>
+              <p class="message" id="scamMessagePreview">Choose a scam category above to prepare a message for Digital Watchdogs.</p>
+            </div>
+            <div role="status" aria-live="polite" class="muted-note" style="margin-top:14px" id="scamFormStatus">Please choose a category to continue.</div>
+            <a id="scamWhatsappButton" href="#scamTypeGrid" class="btn btn-primary scam-submit" style="margin-top:14px">Message our team on WhatsApp ↗</a>
+            <div class="scam-danger"><strong>Financial emergency?</strong> If you have sent money, see unauthorized bank or card transactions, or fear identity theft, contact your financial institution immediately. Our WhatsApp team is not a bank, law enforcement agency, or guaranteed recovery service.</div>
+            <div class="scam-footlinks">
+              <a href="https://consumer.ftc.gov/articles/what-do-if-you-were-scammed" target="_blank" rel="noopener noreferrer">FTC: What to do after a scam ↗</a>
+              <a href="https://www.ic3.gov/" target="_blank" rel="noopener noreferrer">FBI Internet Crime Complaint Center ↗</a>
+              <a href="#recovery">Social media account recovery ↓</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt" id="recovery">
       <div class="wrap recovery-wrap">
         <div class="recovery-intro">
@@ -570,7 +737,7 @@
         <div>
           <div class="small-label" style="color:#8ce8d8"><span class="tick"></span> LET'S CONNECT</div>
           <h2 style="margin-top:14px">Have a question?<br>We’re here to help you take the next step.</h2>
-          <p class="lead">Reach Digital Watchdogs through published team contact channels. Ask about scam warning signs, account safety, or where to find verified reporting information.</p>
+          <p class="lead">Reach Digital Watchdogs through published team contact channels. Ask about romance, investment, crypto, housing, card, identity, or social media scams — or other suspicious activity — and learn about safer next steps.</p>
           <div class="contact-note"><strong>Safety reminder:</strong> In your first message, describe the situation generally. Do not send passwords, verification codes, wallet recovery phrases, bank account numbers, or identity documents.</div>
           <div class="social-row">
             <div class="simple-box"><strong>Your privacy matters</strong><p>No passwords, verification codes, or wallet seed phrases are ever needed to contact us.</p></div>
@@ -682,7 +849,7 @@
   }
 
   const phoneDigits = String(config.whatsappNumber || '').replace(/\D/g, '');
-  const fallbackMessage = 'Hello Digital Watchdogs team, I would like guidance about social media account safety or online scam concerns.';
+  const fallbackMessage = 'Hello Digital Watchdogs team, I would like guidance about a possible online scam or account safety concern.';
   const buildWhatsappUrl = (message) => {
     if (!/^\d{8,15}$/.test(phoneDigits)) return '#contact';
     return 'https://wa.me/' + phoneDigits + '?text=' + encodeURIComponent(message || fallbackMessage);
@@ -692,7 +859,7 @@
     const defaultUrl = buildWhatsappUrl(fallbackMessage);
     activateCard('whatsappCard', 'whatsappLabel', 'Chat with our team on WhatsApp', defaultUrl, true);
     const hero = document.getElementById('heroWhatsApp');
-    hero.href = '#recovery';
+    hero.href = '#scam-help';
     const floatBtn = document.getElementById('whatsappFloat');
     floatBtn.href = defaultUrl;
     floatBtn.target = '_blank';
@@ -804,6 +971,88 @@
     }
   });
   refreshPreview();
+
+  // Universal Scam Help Center — prepares a WhatsApp message, never sends silently.
+  const scamCatalog = {"investment":{"label":"Investment & trading fraud","issues":["Fake investment or broker platform","Guaranteed profit or high-return promise","Withdrawal blocked or extra fees demanded","Someone impersonating an investment adviser","Other investment concern"],"tip":"If money was sent, contact the bank or payment provider immediately. Be cautious of anyone offering paid recovery."},"crypto":{"label":"Bitcoin & crypto fraud","issues":["Crypto sent to a scammer","Fake crypto exchange or wallet website","Account frozen or withdrawal fees demanded","Fake crypto recovery service","Someone requesting my seed phrase","Other cryptocurrency concern"],"tip":"Cryptocurrency transactions may be irreversible. Contact your exchange or wallet provider through its official support channels and report suspected fraud."},"romance":{"label":"Romance & relationship scams","issues":["Online partner requested money or crypto","They claim to be military or working overseas","Threats to share intimate images (sextortion)","Someone is using a fake identity","Other romance scam concern"],"tip":"Avoid sending more money, gift cards, or personal images. Save evidence and block the scammer when safe."},"bank":{"label":"Banking & credit-card fraud","issues":["Unauthorized credit-card transaction","Unauthorized bank withdrawal or transfer","Bank impersonation or phishing message","Lost or compromised card details","Payment app or Zelle transfer fraud","Other banking concern"],"tip":"Contact your bank or card issuer now using the phone number on your card or official app. Ask about blocking the card and disputing transactions."},"identity":{"label":"Identity theft & impersonation","issues":["Someone opened an account in my name","My Social Security or identity details were exposed","Someone is impersonating me","I received a suspicious credit or tax notice","Other identity theft concern"],"tip":"Visit IdentityTheft.gov for an official recovery plan and consider credit freezes or fraud alerts if appropriate."},"realestate":{"label":"Real estate & rental scams","issues":["Fake rental property or landlord","Security deposit or application fee scam","Real-estate closing wire instructions changed","Fake property sale or agent","Other housing or real estate concern"],"tip":"Before paying, independently verify the listing and agent. If a wire was sent, call the bank immediately using a trusted number."},"shopping":{"label":"Online shopping & marketplace","issues":["I paid but the item never arrived","Fake website or online store","Marketplace buyer or seller tricked me","Refund, shipping, or delivery scam","Other shopping concern"],"tip":"Check the payment provider’s buyer protection and dispute options; do not send extra payments to unlock a refund."},"jobs":{"label":"Jobs & employment scams","issues":["Work-from-home or task scam","Fake recruiter or employment offer","I paid an application or equipment fee","Employer asked me to deposit or forward a check","Other employment concern"],"tip":"Legitimate employers should not require payment to unlock wages or ask you to move money for them."},"social":{"label":"Social media & account scams","issues":["My account was hacked or locked","Impersonator is using my identity","Suspicious messages sent from my account","Fake verification or phishing link","Other social media concern"],"tip":"Use the platform’s official recovery process. Never share a one-time verification code. You can also use our platform-specific recovery guide below."},"tech":{"label":"Tech support & device scams","issues":["Fake antivirus or virus warning","Someone requested remote access to my device","Fake technical support or repair invoice","Suspicious program or pop-up after a call","Other tech support concern"],"tip":"If a stranger has remote access, disconnect the device from the internet and seek support from a trusted provider."},"business":{"label":"Business & invoice fraud","issues":["Invoice or payment details were altered","Business email account was compromised","A supplier or executive was impersonated","Fake business investment or partnership","Other business fraud concern"],"tip":"Confirm any changed payment instructions using a phone number you already trust, never the number in the suspicious message."},"loans":{"label":"Loans, debt & credit scams","issues":["Loan required an upfront payment","Fake debt collector or relief company","Credit repair or credit score promise","I shared documents with a suspicious lender","Other loan or debt concern"],"tip":"Be wary of advance fees and pressure to pay before receiving a loan or debt service."},"government":{"label":"Government impersonation","issues":["Fake IRS or tax refund communication","Social Security benefits or number threat","Caller pretends to be law enforcement","I was told to pay with gift cards or crypto","Other government impersonation"],"tip":"Go directly to the agency’s known official website or phone number to verify a message."},"charity":{"label":"Charity & emergency fraud","issues":["Fake charity or donation page","Urgent medical or disaster fundraiser","Someone asked for emergency money using a fake identity","Other charity or emergency concern"],"tip":"Verify a charity independently before donating, and avoid sending money in response to unexpected pressure."},"prize":{"label":"Prizes, lottery & inheritance","issues":["I was told I won a prize but must pay first","Fake inheritance or unclaimed funds","Gift-card or wire payment requested for winnings","Other prize or inheritance concern"],"tip":"You should not need to pay a fee to collect a legitimate prize you never entered to win."},"other":{"label":"Other or not sure","issues":["Not sure whether this is a scam","Unexpected message asking for money","I gave away personal details","I think a friend or family member is being targeted","Other situation"],"tip":"When in doubt, stop sending money or codes, verify independently, and document what happened."}};
+  const scamButtons = Array.from(document.querySelectorAll('[data-scam]'));
+  const scamSelected = document.getElementById('selectedScamText');
+  const scamNameInput = document.getElementById('scamVisitorName');
+  const scamIssueSelect = document.getElementById('scamConcern');
+  const scamExposureSelect = document.getElementById('scamMoney');
+  const scamDescInput = document.getElementById('scamDescription');
+  const scamSafetyTip = document.getElementById('scamSafetyTip');
+  const scamPreview = document.getElementById('scamMessagePreview');
+  const scamStatus = document.getElementById('scamFormStatus');
+  const scamWhatsAppBtn = document.getElementById('scamWhatsappButton');
+  let currentScamKey = '';
+
+  const scamCompose = () => {
+    const entry = scamCatalog[currentScamKey];
+    if (!entry) return '';
+    const name = scamNameInput.value.trim().replace(/\s+/g, ' ');
+    const intro = name ? 'Hello Digital Watchdogs team, my first name is ' + name + '.' : 'Hello Digital Watchdogs team.';
+    const issue = scamIssueSelect.value.trim();
+    const exposure = scamExposureSelect.value.trim();
+    const description = scamDescInput.value.trim().replace(/\s+/g, ' ');
+    return [
+      intro,
+      'I would like independent guidance about a possible ' + entry.label.toLowerCase() + ' incident.',
+      issue ? 'Situation: ' + issue + '.' : '',
+      exposure ? 'Money or information: ' + exposure + '.' : '',
+      description ? 'Brief context: ' + description.replace(/[.!?]+$/, '') + '.' : '',
+      'Please advise on safer next steps and official reporting or recovery channels.'
+    ].filter(Boolean).join(' ');
+  };
+  const scamRefresh = () => {
+    const message = scamCompose();
+    scamPreview.textContent = message || 'Choose a scam category above to prepare a message for Digital Watchdogs.';
+    scamStatus.textContent = !currentScamKey ? 'Select a category first.' :
+      'Your message is prepared. WhatsApp will open, and you decide whether to press Send.';
+    if (message && /^\d{8,15}$/.test(phoneDigits)) {
+      scamWhatsAppBtn.href = buildWhatsappUrl(message);
+      scamWhatsAppBtn.target = '_blank';
+      scamWhatsAppBtn.rel = 'noopener noreferrer';
+      scamWhatsAppBtn.removeAttribute('aria-disabled');
+    } else {
+      scamWhatsAppBtn.href = '#scam-help';
+      scamWhatsAppBtn.removeAttribute('target');
+    }
+  };
+  scamButtons.forEach(button => button.addEventListener('click', () => {
+    currentScamKey = button.dataset.scam || '';
+    const entry = scamCatalog[currentScamKey];
+    scamButtons.forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+    scamSelected.textContent = 'Selected: ' + entry.label;
+    scamSafetyTip.textContent = entry.tip;
+    scamIssueSelect.disabled = false;
+    scamIssueSelect.replaceChildren();
+    const first = document.createElement('option');
+    first.value = '';
+    first.textContent = 'Choose an issue (optional)';
+    scamIssueSelect.appendChild(first);
+    entry.issues.forEach(issue => {
+      const option = document.createElement('option');
+      option.value = issue;
+      option.textContent = issue;
+      scamIssueSelect.appendChild(option);
+    });
+    scamRefresh();
+    // Bring the simple help form into view after choosing a scam type.
+    document.getElementById('scamIntake').scrollIntoView({behavior:'smooth', block:'start'});
+  }));
+  [scamNameInput, scamIssueSelect, scamExposureSelect, scamDescInput].forEach(input => {
+    input.addEventListener('input', scamRefresh);
+    input.addEventListener('change', scamRefresh);
+  });
+  scamWhatsAppBtn.addEventListener('click', event => {
+    if (currentScamKey && /^\d{8,15}$/.test(phoneDigits)) return;
+    event.preventDefault();
+    scamStatus.textContent = currentScamKey ? 'The team contact is not configured yet.' : 'Choose a scam type above before continuing.';
+    document.getElementById('scamTypeGrid').scrollIntoView({behavior:'smooth',block:'center'});
+    scamButtons[0].focus({preventScroll:true});
+  });
+  scamRefresh();
+
 })();
 </script>
 </body>
